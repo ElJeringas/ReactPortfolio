@@ -1,0 +1,46 @@
+/* header.css */
+
+/* Style the wave container to position the wave background */
+.wave-container {
+    position: relative;
+    background-color: #fff; /* Set the background color behind the wave */
+  }
+  
+  /* Style the wave background */
+  .wave-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; /* Place it behind the content */
+  }
+  
+  /* Style the navbar */
+  .navbar {
+    background-color: transparent; /* Make the navbar transparent */
+    padding: 20px; /* Add padding as needed */
+  }
+  
+  #menulist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menulist li {
+    margin: 0 15px; /* Adjust the spacing between navbar items */
+  }
+  
+  #menulist li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  #menulist li a:hover {
+    color: #fe6900; /* Change the color on hover */
+  }
+  

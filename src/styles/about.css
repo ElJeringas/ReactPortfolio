@@ -1,0 +1,90 @@
+/* about.css */
+@keyframes fade-up {
+  0%{
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+  
+}
+
+
+.about-container {
+  display: flex;
+  height: 100vh;
+  background-image: url('../assets/images/blob.svg'); /* Add your background image path */
+  background-repeat: no-repeat;
+}
+
+/* Style the container for the circular image */
+.image-container {
+  position: relative;
+  width: 200px; /* Adjust the width and height as needed */
+  height: 200px;
+  border: 2px solid #333; /* Add a border with your desired color */
+  border-radius: 50%; /* Create a circular shape */
+  overflow: hidden; /* Hide any image overflow outside the circle */
+}
+
+/* Style the circular image */
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain the image aspect ratio and cover the circle */
+  transition: transform 0.3s ease-in-out; /* Add a simple animation */
+
+  /* Add hover animation for scaling */
+  &:hover {
+    transform: scale(1.1); /* Increase the image size on hover */
+  }
+}
+
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 150px; /* Adjust the left position to place it in the left corner */
+  background: none;
+  color: #fff;
+
+}
+
+.background-name {
+  position: absolute;
+  top: 56%;
+  left: 150px; /* Adjust the left position to place it in the left corner */
+  background: none;
+  color: #fff;
+  
+}
+
+.about-name {
+  position: absolute;
+  top: 56%;
+  left: 150px; /* Adjust the left position to place it in the left corner */
+  background: none;
+  color: #fff;
+  margin: 0;
+}
+
+.background-about {
+  position: absolute;
+  top: 50%;
+  right: 0; /* Adjust the left position to place it in the left corner */
+  background: none;
+  margin: 0;
+  animation: fade-up 0.9s;
+
+}
+
+.animated{
+  position: absolute;
+  width: 200px; /* Adjust the width and height as needed */
+  height: 200px;
+  left:10; /* Adjust the left position to place it in the left corner */
+
+}
+

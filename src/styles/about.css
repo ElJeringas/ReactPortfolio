@@ -15,14 +15,19 @@
 
 .about-container {
   display: flex;
+  justify-content: space-between; /* Arrange content in a row with space between them */
+  align-items: flex-start;
   height: 100vh;
-  background-image: url('../assets/images/blob.svg'); /* Add your background image path */
-  background-repeat: no-repeat;
 }
 
+.content-left {
+  flex: 1; /* Take up available space on the left */
+  position: relative;
+}
 /* Style the container for the circular image */
 .image-container {
   position: relative;
+  z-index: 2;
   width: 200px; /* Adjust the width and height as needed */
   height: 200px;
   border: 2px solid #333; /* Add a border with your desired color */
@@ -42,49 +47,104 @@
     transform: scale(1.1); /* Increase the image size on hover */
   }
 }
+.background-photo {
+  position: absolute; /* Set the blob image to absolute positioning */
+  top: 0;
+  right: 1vw;
+  width: 650px;
+  height: 650px;
+  z-index: 1; /* Place it behind the profile picture */
+  justify-content: flex-start; /* Align content to the left */
+  align-items: flex-start; /* Align content to the top */
+}
 
-.background-text {
-  position: absolute;
-  top: 50%;
-  left: 150px; /* Adjust the left position to place it in the left corner */
+.greetings{
+  position:absolute;
   background: none;
+  z-index: 1;
+  top: 45vh;
+  left: 9vw;
+  display: flex;
+  align-items: center;
+}
+
+.greetings h1{
+  position: absolute;
   color: #fff;
+  background: none;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.text-generated{
+  position:absolute;
+  display: flex;
+  background: none;
+  align-items: center;
+  z-index: 1;
+  top: 55vh;
+  left: 20vh;
+  transform: translateY(-40%);
 
 }
 
-.background-name {
-  position: absolute;
-  top: 56%;
-  left: 150px; /* Adjust the left position to place it in the left corner */
-  background: none;
+.text-generated h2{
   color: #fff;
-  
-}
-
-.about-name {
-  position: absolute;
-  top: 56%;
-  left: 150px; /* Adjust the left position to place it in the left corner */
   background: none;
-  color: #fff;
-  margin: 0;
+  font-weight: 900;
+  font-size: 40px;
 }
-
-.background-about {
-  position: absolute;
-  top: 50%;
-  right: 0; /* Adjust the left position to place it in the left corner */
+.text-generated span{
   background: none;
-  margin: 0;
-  animation: fade-up 0.9s;
-
+  font-weight: 900;
+  font-size: xx-large;
+  font-size: 35px;
+}
+/* Stack container */
+.stack-container {
+  flex: 1; /* Take up available space on the right */
+  padding-left: 20px; /* Add padding to separate content */
+  margin-top: 10vh;
+  margin-right: 30px;
+  right: 40;
 }
 
-.animated{
-  position: absolute;
-  width: 200px; /* Adjust the width and height as needed */
-  height: 200px;
-  left:10; /* Adjust the left position to place it in the left corner */
-
+.counter-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 15px; /* Add some gap between grid items */
 }
 
+/* Center the second row (boxes 7 and onwards) */
+.counter-grid .box:nth-child(n + 7) {
+  align-self: center;
+}
+
+.stack-title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.counter-grid hr {
+  width: 75%;
+  margin: 18px auto;
+  background: #7fc142;
+  height: 2px;
+  border: none;
+}
+
+.box img {
+  width: 55px;
+  height: 55px;
+}
+
+.box {
+  margin: 15px;
+  transition: transform 0.3s ease; 
+}
+
+.box:hover {
+  transform: scale(1.1); /* Increase the size by 10% (zoom in) */
+}

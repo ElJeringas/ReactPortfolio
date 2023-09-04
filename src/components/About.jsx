@@ -3,16 +3,12 @@ import { gsap } from 'gsap';
 import profilePhoto from '../assets/images/foto.png';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import '../styles/about.css'; // Import your CSS file
+import blob from '../assets/images/blob.svg';
 
 function About() {
-  const [ text ] = useTypewriter({
+  const [text] = useTypewriter({
     words: [' Santiago', ' Frontend Engineer', ' Heraldo'],
     loop: {},
-  });
-
-  const [ about ] = useTypewriter({
-    words: ['I`m a passionate engineer based in Ecuador'],
-    loop: false,
   });
 
   useEffect(() => {
@@ -38,23 +34,61 @@ function About() {
 
   return (
     <div className='about-container'>
-      <div className='image-container'>
-        <img src={profilePhoto} alt='' className='profile-image' />
+      <div className='content-left'>
+        <div className='image-container'>
+          <img src={profilePhoto} alt='' className='profile-image' />
+        </div>
+        <div>
+          <img className='background-photo' src={blob} alt='' />
+        </div>
+        <div className='greetings'>
+          <h1 className='greetings-h1'>Hi</h1>
+        </div>
+        <div className='text-generated'>
+          <h2>
+            I'm
+            <span style={{ fontWeight: 'bold', background: 'none' }}>{text}</span>
+            <Cursor />
+          </h2>
+        </div>
       </div>
-      <div className='overlay-text'>
-        <h1 className='background-text'>Hi</h1>
-        <h1 className='background-name'>
-          I'm     
-          <span style={{ fontWeight: 'bold',   background: 'none' }}>
-            {text}
-          </span>
-          <Cursor />
-        </h1>
+      <div className='stack-container'>
+        <h2 className='stack-title'>Tech Stack</h2>
+        <div className='counter-grid'>
+        <div className='box'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+        </div>
+        <div className='box'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+        </div>
+        <div className='box'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+        </div>
+        <div className='box'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+        </div>
+        <div className='box'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" />
+        </div>
+        <div className='box'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+        </div>
+        <div className='box'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" />
+        </div>
+        <div className='box'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+        </div>
+        <div className='box'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
+        </div>
+        <div className='box'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" />
+        </div>
+        <div className='box'>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+        </div>
       </div>
-      <div className='about-text'>
-        <h1 className='background-about'>
-            I`m a passionate engineer based in Ecuador.
-        </h1>
       </div>
     </div>
   );

@@ -9,10 +9,6 @@ function Home() {
     <>
     <Header/>
     <About/>
-    <Stack/>
-    <Projects/>
-    <Contact/>
-
     </>
   )
 }

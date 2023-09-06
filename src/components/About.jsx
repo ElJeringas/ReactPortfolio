@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import { gsap } from 'gsap';
 import profilePhoto from '../assets/images/foto.png';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
@@ -38,15 +38,13 @@ function About() {
         <div className='image-container'>
           <img src={profilePhoto} alt='' className='profile-image' />
         </div>
-        <div>
           <img className='background-photo' src={blob} alt='' />
-        </div>
         <div className='greetings'>
           <h1 className='greetings-h1'>Hi</h1>
         </div>
         <div className='text-generated'>
           <h2>
-            I'm
+            I`m
             <span style={{ fontWeight: 'bold', background: 'none' }}>{text}</span>
             <Cursor />
           </h2>
@@ -89,7 +87,11 @@ function About() {
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
         </div>
       </div>
+      <div className='button-about'>
+        <button>More</button>
       </div>
+      </div>
+
     </div>
   );
 }

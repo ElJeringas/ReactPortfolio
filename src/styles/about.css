@@ -1,4 +1,5 @@
 /* about.css */
+
 @keyframes fade-up {
   0%{
     opacity: 0;
@@ -13,16 +14,18 @@
 }
 
 
+
 .about-container {
   display: flex;
   justify-content: space-between; /* Arrange content in a row with space between them */
   align-items: flex-start;
-  height: 100vh;
+  height: 90vh;
 }
 
 .content-left {
   flex: 1; /* Take up available space on the left */
   position: relative;
+  animation: fade-up 0.5s;
 }
 /* Style the container for the circular image */
 .image-container {
@@ -52,7 +55,7 @@
   top: 0;
   right: 1vw;
   width: 650px;
-  height: 650px;
+  height: 600px;
   z-index: 1; /* Place it behind the profile picture */
   justify-content: flex-start; /* Align content to the left */
   align-items: flex-start; /* Align content to the top */
@@ -107,6 +110,7 @@
   margin-top: 10vh;
   margin-right: 30px;
   right: 40;
+  animation: fade-up 1.4s;
 }
 
 .counter-grid {
@@ -136,8 +140,8 @@
 }
 
 .box img {
-  width: 55px;
-  height: 55px;
+  width: 65px;
+  height: 65px;
 }
 
 .box {
@@ -148,3 +152,27 @@
 .box:hover {
   transform: scale(1.1); /* Increase the size by 10% (zoom in) */
 }
+
+.button-about {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(63, 94, 251);
+  background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  border-radius: 3px;
+  padding: 10px;
+  font-weight: 500;
+
+  &:hover, &:focus {
+    transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+    animation: gelatine 0.5s 1;
+  }
+}
+
+

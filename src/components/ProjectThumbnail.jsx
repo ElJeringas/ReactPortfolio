@@ -34,3 +34,4 @@ function ProjectThumbnail({title, description, img, url, tech}) {
 }
 
 export default ProjectThumbnail
+

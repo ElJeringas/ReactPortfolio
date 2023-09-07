@@ -59,14 +59,17 @@
   z-index: 1; /* Place it behind the profile picture */
   justify-content: flex-start; /* Align content to the left */
   align-items: flex-start; /* Align content to the top */
+  background: none;
+  opacity: 1;
 }
+
 
 .greetings{
   position:absolute;
   background: none;
   z-index: 1;
-  top: 45vh;
-  left: 9vw;
+  top: 50vh;
+  left: 7vw;
   display: flex;
   align-items: center;
 }
@@ -85,8 +88,8 @@
   background: none;
   align-items: center;
   z-index: 1;
-  top: 55vh;
-  left: 20vh;
+  top: 60vh;
+  left: 15vh;
   transform: translateY(-40%);
 
 }

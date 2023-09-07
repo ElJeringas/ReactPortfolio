@@ -4,6 +4,7 @@ import profilePhoto from '../assets/images/foto.png';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import '../styles/about.css'; // Import your CSS file
 import blob from '../assets/images/blob.svg';
+import men from '../assets/images/men.svg'
 
 function About() {
   const [text] = useTypewriter({

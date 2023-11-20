@@ -1,6 +1,5 @@
 import  { useEffect } from 'react';
 import { gsap } from 'gsap';
-import profilePhoto from '../assets/images/foto.png';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import '../styles/about.css'; // Import your CSS file
 import blob from '../assets/images/blob.svg';
@@ -12,34 +11,22 @@ function About() {
     loop: {},
   });
 
-  useEffect(() => {
-    // Initialize GSAP animation
-    gsap.registerPlugin();
-
-    const tl = gsap.timeline({ repeat: -1, yoyo: true });
-
-    // Define the animation
-    tl.to('.profile-image', {
-      duration: 2,
-      scale: 1.1,
-      ease: 'power4.inOut',
-    });
-
-    // Adjust the animation parameters to your liking
-
-    return () => {
-      // Clean up GSAP animation on unmount
-      tl.kill();
-    };
-  }, []);
+  const downloadCV = () => {
+    const cvUrl = '/CV SS.pdf';
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'CV_SantiagoSarmiento.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
   return (
     <div className='about-container'>
       <div className='content-left'>
-        <div className='image-container'>
-          <img src={profilePhoto} alt='' className='profile-image' />
-        </div>
+        <div className='background-container'>
           <img className='background-photo' src={blob} alt='' />
+        </div>
         <div className='greetings'>
           <h1 className='greetings-h1'>Hi</h1>
         </div>
@@ -89,7 +76,7 @@ function About() {
         </div>
       </div>
       <div className='button-about'>
-        <button>More</button>
+        <button onClick={downloadCV}>Download CV</button>
       </div>
       </div>
 

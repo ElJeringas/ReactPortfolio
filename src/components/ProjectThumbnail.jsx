@@ -25,7 +25,7 @@ function ProjectThumbnail({title, description, img, url, tech}) {
           ))}
                 </CardContent>
                 <CardActions>
-                    <button className='button-about' onClick={() => { window.location.href = url; } }>See Project</button>
+                    <a type='button' href={url} target="_blank" rel="noopener noreferrer"  className='button-project'>See Project</a>
                 </CardActions>
             </Card>
         </Grid>

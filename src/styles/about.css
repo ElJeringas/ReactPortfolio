@@ -13,8 +13,6 @@
   
 }
 
-
-
 .about-container {
   display: flex;
   justify-content: space-between; /* Arrange content in a row with space between them */
@@ -28,30 +26,13 @@
   animation: fade-up 0.5s;
 }
 /* Style the container for the circular image */
-.image-container {
-  position: relative;
-  z-index: 2;
-  width: 200px; /* Adjust the width and height as needed */
-  height: 200px;
-  border: 2px solid #333; /* Add a border with your desired color */
-  border-radius: 50%; /* Create a circular shape */
-  overflow: hidden; /* Hide any image overflow outside the circle */
-}
 
-/* Style the circular image */
-.profile-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Maintain the image aspect ratio and cover the circle */
-  transition: transform 0.3s ease-in-out; /* Add a simple animation */
-
-  /* Add hover animation for scaling */
-  &:hover {
-    transform: scale(1.1); /* Increase the image size on hover */
-  }
+.background-container{
+  display: flex;
+  position: absolute;
 }
 .background-photo {
-  position: absolute; /* Set the blob image to absolute positioning */
+   /* Set the blob image to absolute positioning */
   top: 0;
   right: 1vw;
   width: 650px;
@@ -62,7 +43,6 @@
   background: none;
   opacity: 1;
 }
-
 
 .greetings{
   position:absolute;
@@ -149,7 +129,7 @@
 
 .box {
   margin: 15px;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .box:hover {
@@ -169,8 +149,9 @@ button {
   background: rgb(63, 94, 251);
   background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
   border-radius: 3px;
-  padding: 10px;
-  font-weight: 500;
+  padding: 1rem;
+  font-weight: 700;
+  cursor: pointer;
 
   &:hover, &:focus {
     transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
@@ -178,4 +159,62 @@ button {
   }
 }
 
+@media screen and (max-width:600px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .background-container  {
+    order: 1;
+    width: 350px;
+    height: 450px;
+    align-content: center;
+    justify-content: center;
+    position: static;
+    margin: 0;
+    padding: 0;
+
+  }
+  .background-photo  {
+    width: 100%;
+    height: 100%;
+  }
+  .greetings{
+    position:absolute;
+    background: none;
+    z-index: 1;
+    top: 25vh;
+    left: 10vw;
+    display: flex;
+    align-items: center;
+  }
+  
+  .greetings h1{
+    position: absolute;
+    color: #fff;
+    background: none;
+    font-weight: 700;
+    font-size: 35px;
+  }
+  
+  .text-generated{
+    top: 20vh;
+    left: 5vh;
+    transform: none;
+    width: 200px;
+    height: 200px;
+  }
+
+  .text-generated h2{
+    font-weight: 500;
+    font-size: 30px;
+  }
+  .text-generated span{
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+}
 

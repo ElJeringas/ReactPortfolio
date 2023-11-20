@@ -1,0 +1,22 @@
+.image-container {
+    position: relative;
+    z-index: 2;
+    width: 200px; /* Adjust the width and height as needed */
+    height: 200px;
+    border: 2px solid #333; /* Add a border with your desired color */
+    border-radius: 50%; /* Create a circular shape */
+    overflow: hidden; /* Hide any image overflow outside the circle */
+  }
+  
+  /* Style the circular image */
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain the image aspect ratio and cover the circle */
+    transition: transform 0.3s ease-in-out; /* Add a simple animation */
+  
+    /* Add hover animation for scaling */
+    &:hover {
+      transform: scale(1.1); /* Increase the image size on hover */
+    }
+  }

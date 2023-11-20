@@ -1,4 +1,20 @@
 *{
-    background-color: #fff;
+    background-color:#fff /* #FDE6E0 */;
     color: #2d3748;
+}
+
+.button-project {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(63, 94, 251);
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+a{
+    outline: none;
 }

@@ -1,7 +1,7 @@
 
 .contact-container{
 /*     margin-top: 2vh;
- */    display: flex;
+ */ display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -14,7 +14,17 @@
     z-index: 1;
     margin-left: 5vw;
     margin-right:5vw;
-    padding: 20px; /* Add padding for better spacing */
+    padding: 10px; /* Add padding for better spacing */
+}
+.form-title{
+    display: flex;
+}
+.form-title img{
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+    background: none;
+    margin-top: 12px;
 }
 
 .content-background{
@@ -32,44 +42,59 @@
 
 .input-form{
     margin-bottom: 10px;
-    color: black;
     text-decoration: none;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
+    margin-top: 8px;
 }
 
-.input-message{
+.input-message {
+    font-family: inherit;
     margin-bottom: 10px;
-    color: black;
     text-decoration: none;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
-    text-align: left;
-    height: 100px;
-    line-height: 200px;
-}
+    width: 100%; /* Make the input take up 100% of its container width */
+    text-align: left; /* Align the text to the left */
+    height: auto; /* Allow the input to expand in height as needed */
+    resize: vertical; /* Allow vertical resizing */
+    overflow-y: auto; /* Add vertical scroll when content exceeds the height */
+    min-height: 100px; /* Set a minimum height to prevent it from collapsing */
+    line-height: normal; 
+    margin-top: 8px;
+  }
+  
 
 .submit-button{
     background-color: cadetblue;
     color: aliceblue;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 15px 10px 15px;
     border: none;
 }
 
-/* Add these styles to change the placeholder color and opacity */
-.input-form::placeholder,
-.input-message::placeholder {
-  color: #999; /* Change to your desired color */
-  opacity: 0.7; /* Change to your desired opacity */
-}
-/* Change the border color to orange when the input is clicked (in focus) */
+::placeholder {
+    font-weight: 500; /* Adjust font weight as needed */
+    opacity: 0.7; /* Adjust opacity as needed */
+    color: #999; /* Adjust color as needed */
+  }
+
 .input-form:focus,
 .input-message:focus {
-  border-color: #70342C; /* Change to your desired color */
-  outline: none; /* Remove the default focus outline */
+    border-color: cadetblue;
+    outline: none;
+}
+
+.label {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.label-text {
+    font-weight: 500;
+    font-size: 15px;
+    color: cadetblue;
 }

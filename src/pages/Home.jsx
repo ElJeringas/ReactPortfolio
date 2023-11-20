@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import About from '../components/About'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
+import FindMe from '../components/FindMe'
 function Home() {
   return (
     <>
@@ -9,6 +10,7 @@ function Home() {
     <About/>
     <Projects/>
     <Contact/>
+    <FindMe/>
     </>
   )
 }

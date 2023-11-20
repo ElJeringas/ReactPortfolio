@@ -19,46 +19,55 @@ import django from '../assets/images/icons/django-plain-wordmark.svg'
 import opencv from '../assets/images/icons/opencv-original.svg'
 import numpy from '../assets/images/icons/numpy-original.svg'
 import raspberry from '../assets/images/icons/raspberrypi-original.svg'
+import restaurant from '../assets/images/Thumbnails/restauran.png'
 
 
 function Projects() {
   const projects = [
     {
       id: 1,
+      title: 'Restaurant Website',
+      description: 'Restaurant website, photos videos and dishes 🍽️🍴.',
+      img: restaurant,
+      url: 'https://restaurant-website-sf-bq66.vercel.app/',
+      tech:[html,css,js,react_icon,mui],
+    },
+    {
+      id: 2,
       title: 'Hotel Booking Website',
-      description: 'Quis laborum consequat ea sit anim qui reprehenderit ipsum in est tempor commodo sint ex.',
+      description: 'Hotel website page 🏨.',
       img: hotel,
       url: 'https://booking-website-eight.vercel.app/',
       tech:[html,css,js,react_icon,mui],
     },
     {
-      id: 2,
+      id: 3,
       title: 'Spoonacular',
-      description: 'Quis laborum consequat ea sit anim qui reprehenderit ipsum in est tempor commodo sint ex.',
+      description: 'Food recipes and dishes from everywhere🌎',
       img: spoonacular,
       url: 'https://project1url.com',
       tech:[html,css,js,react_icon,mui],
     },
     {
-      id: 3,
+      id: 4,
       title: 'Farm-Management',
-      description: 'Quis laborum consequat ea sit anim qui reprehenderit ipsum in est tempor commodo sint ex.',
+      description: 'Farming managament, breeds control and more... 🧑🏻‍🌾🧺',
       img: farm,
       url: 'https://project1url.com',
       tech:[html,css,js,react_icon,mui],
 
     },
     {
-      id: 4,
+      id: 5,
       title: 'Marketplace',
-      description: 'Quis laborum consequat ea sit anim qui reprehenderit ipsum in est tempor commodo sint ex.',
+      description: 'Market place using django and HTML 🏪🫙',
       img: marketplace,
       url: 'https://project1url.com',
       tech:[py,django,html,css,tailwind],
 
     },
     {
-      id: 5,
+      id: 6,
       title: 'Inclusive Board Game',
       description: 'Quis laborum consequat ea sit anim qui reprehenderit ipsum in est tempor commodo sint ex.',
       img: board,
@@ -67,7 +76,7 @@ function Projects() {
 
     },
     {
-      id: 6,
+      id: 7,
       title: 'Pokemon',
       description: 'Quis laborum consequat ea sit anim qui reprehenderit ipsum in est tempor commodo sint ex.',
       img: pokemon,

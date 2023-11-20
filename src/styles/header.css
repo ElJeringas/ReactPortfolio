@@ -3,16 +3,7 @@
 /* Style the wave container to position the wave background */
 .wave-container {
     position: relative;
-    background-color: #fff; /* Set the background color behind the wave */
-  }
-  
-  /* Style the wave background */
-  .wave-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1; /* Place it behind the content */
+    flex-wrap: wrap;
   }
   
   /* Style the navbar */
@@ -26,8 +17,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10;
   }
-  
+
   #menulist li {
     margin: 0 15px; /* Adjust the spacing between navbar items */
   }
@@ -43,4 +35,22 @@
   #menulist li a:hover {
     color: #fe6900; /* Change the color on hover */
   }
-  
+
+  @media screen and (max-width:600px) {
+    .navbar {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      padding: 0px;
+      margin: 0px;
+    }
+    #menulist li {
+      margin-right: 12px;
+      margin-left: 0;
+    }
+    
+  #menulist ul {
+    margin-left: 0;
+  }
+}

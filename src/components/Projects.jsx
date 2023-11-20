@@ -45,7 +45,7 @@ function Projects() {
       title: 'Spoonacular',
       description: 'Food recipes and dishes from everywhere🌎',
       img: spoonacular,
-      url: 'https://project1url.com',
+      url: 'https://github.com/ElJeringas?tab=repositories',
       tech:[html,css,js,react_icon,mui],
     },
     {
@@ -53,7 +53,7 @@ function Projects() {
       title: 'Farm-Management',
       description: 'Farming managament, breeds control and more... 🧑🏻‍🌾🧺',
       img: farm,
-      url: 'https://project1url.com',
+      url: 'https://github.com/ElJeringas/Farm-management-React',
       tech:[html,css,js,react_icon,mui],
 
     },
@@ -62,31 +62,31 @@ function Projects() {
       title: 'Marketplace',
       description: 'Market place using django and HTML 🏪🫙',
       img: marketplace,
-      url: 'https://project1url.com',
+      url: 'https://github.com/ElJeringas/Marketplace',
       tech:[py,django,html,css,tailwind],
 
     },
     {
       id: 6,
       title: 'Inclusive Board Game',
-      description: 'Quis laborum consequat ea sit anim qui reprehenderit ipsum in est tempor commodo sint ex.',
+      description: 'Board game using computer vision and machine learning 🤖👁️.',
       img: board,
-      url: 'https://project1url.com',
+      url: 'https://github.com/ElJeringas/Opencv-OCR-Game',
       tech:[py,opencv,numpy,raspberry],
 
     },
     {
       id: 7,
       title: 'Pokemon',
-      description: 'Quis laborum consequat ea sit anim qui reprehenderit ipsum in est tempor commodo sint ex.',
+      description: 'Pokemon website and searching 🎊.',
       img: pokemon,
-      url: 'https://project1url.com',
+      url: 'https://pokemon-ebon-beta.vercel.app/',
       tech:[html,css,js,react_icon,tailwind],
     },
   ];
 
   return (
-    <div>
+    <section id='about'>
       <div className='projects-heading'>
         <h1>Projects</h1>
       </div>
@@ -97,7 +97,7 @@ function Projects() {
         </div>
       ))}
     </div>
-    </div>
+    </section>
 
   );
 }
